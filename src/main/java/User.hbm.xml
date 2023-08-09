@@ -2,7 +2,7 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.digit.hibernateServlet.bean.UserDetail" table="user">
+	<class name="com.digit.hibernateServlet.bean.UserDetails" table="user">
 		<id name="u_id" column="u_id"></id>
 		<property name="u_name">
 			<column name="u_name" />
