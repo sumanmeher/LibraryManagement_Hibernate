@@ -22,5 +22,6 @@
 		<property name="status">
 			<column name="status" />
 		</property>
+		
 	</class>
 </hibernate-mapping>
