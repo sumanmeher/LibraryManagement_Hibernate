@@ -13,6 +13,7 @@ import com.digit.hibernateServlet.model.AdminModel;
 @WebServlet("/changeBookActive") 
 public class ChangeBookActive extends HttpServlet{
 	@Override
+	
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		int bookId= Integer.parseInt(req.getParameter("bookId"));
 		AdminModel adminModel = new AdminModel();
