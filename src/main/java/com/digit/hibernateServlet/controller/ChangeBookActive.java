@@ -18,7 +18,7 @@ public class ChangeBookActive extends HttpServlet{
 		AdminModel adminModel = new AdminModel();
 		boolean done = adminModel.changeBookActive(bookId);
 	    if(done) {
-	    	res.sendRedirect("success.jsp");
+	    	res.sendRedirect("success.jsp ");
 	    }else {
 	    	res.sendRedirect("failed.jsp");  
 	    }
