@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.digit.hibernateServlet.model.AdminModel;
 
-@WebServlet("/changeBookActive")
+@WebServlet("/changeBookActive") 
 public class ChangeBookActive extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
