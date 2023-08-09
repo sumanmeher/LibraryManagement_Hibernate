@@ -59,9 +59,11 @@ public class UserModel {
 		ps.setAmount(book.getCost());
 		ps.setInvoice_no(invoice_no);
 		
-		System.out.println(bookId+ps.getB_id()+ps.getB_name());
-		PurchaseHistoryDetails ps1=new PurchaseHistoryDetails(5,5,"asdf",1,123,123);
-		session.saveOrUpdate(ps1);
+		
+//		System.out.println(bookId+ps.getB_id()+ps.getB_name());
+//		PurchaseHistoryDetails ps1=new PurchaseHistoryDetails(5,5,"asdf",1,123,123);
+		Serializable save = session.save(ps);
+		tran.commit();
 		
 		return true;
 	}
