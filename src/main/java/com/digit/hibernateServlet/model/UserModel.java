@@ -8,7 +8,6 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-import com.digit.hibernateServlet.bean.AdminDetails;
 import com.digit.hibernateServlet.bean.UserDetails;
 
 public class UserModel {
