@@ -20,7 +20,7 @@ public class ChangeBookActive extends HttpServlet{
 	    if(done) {
 	    	res.sendRedirect("success.jsp");
 	    }else {
-	    	res.sendRedirect("failed.jsp"); 
+	    	res.sendRedirect("failed.jsp");  
 	    }
 	}
 }
