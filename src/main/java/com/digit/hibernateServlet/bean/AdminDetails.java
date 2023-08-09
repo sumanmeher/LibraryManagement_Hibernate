@@ -16,4 +16,7 @@ public class AdminDetails {
 		this.secret_pass = secret_pass;
 	}
 
+	public AdminDetails() {
+		// TODO Auto-generated constructor stub
+	}
 }
