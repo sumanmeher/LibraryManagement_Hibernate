@@ -53,6 +53,62 @@ public class AdminModel {
 		return false;
 	}
 	
+
+	public List inactiveBoooks() {
+		Transaction tran=session.beginTransaction();
+		Query q = session.createQuery("From BookDetails where status='inactive'");
+		List li = q.list();
+		return li;
+		
+	}
+
+
+	public boolean changeBookActive(int bookId) {
+		Transaction tran=session.beginTransaction();
+		BookDetails s = (BookDetails) session.get(BookDetails.class, bookId); // value is based on Primary key
+		s.setStatus("active");
+		session.update(s);
+		tran.commit();
+		return true;
+	}
+
+
+	public List activeBooks() {
+		Transaction tran=session.beginTransaction();
+		Query q = session.createQuery("From BookDetails where status='active'");
+		List li = q.list();
+		return li;
+	}
+
+
+	public boolean changeBookInactive(int bookId) {
+		Transaction tran=session.beginTransaction();
+		BookDetails s = (BookDetails) session.get(BookDetails.class, bookId);
+		s.setStatus("inactive");
+		session.update(s);
+		tran.commit();
+		return true;
+	}
+
+
+	public List inactiveUser() {
+		Transaction tran=session.beginTransaction();
+		Query q = session.createQuery("From UserDetails where status='inactive'");
+		List li = q.list();
+		return li;
+	}
+
+
+	public boolean changeUserActive(int userId) {
+		Transaction tran=session.beginTransaction();
+		UserDetails s = (UserDetails) session.get(UserDetails.class, userId); // value is based on Primary key
+		s.setStatus("active");
+		session.update(s);
+		tran.commit();
+		return true;
+	}
+	
+
 	public List viewPurchaseHistory() {
 		Transaction tran = session.beginTransaction();
 		Query q = session.createQuery("From PurchaseHistoryDetails");
@@ -84,5 +140,6 @@ public class AdminModel {
 		}
 		return true;
 	}
+
 
 }
