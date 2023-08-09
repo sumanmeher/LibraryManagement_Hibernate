@@ -1,6 +1,6 @@
 package com.digit.hibernateServlet.bean;
 
-public class UserDetail {
+public class UserDetails {
 	int u_id;
 	String u_name;
 	String pass;

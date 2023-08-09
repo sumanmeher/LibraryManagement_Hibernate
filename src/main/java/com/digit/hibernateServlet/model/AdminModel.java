@@ -6,11 +6,25 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistryBuilder;
 
 public class AdminModel {
 	public static Connection con;
 	public static Session session;
+	
+	public AdminModel() {
+		DatabaseModel db = new DatabaseModel();
+		con=DatabaseModel.con;
+		Configuration configuration = new Configuration().configure("hibernate.cfg.xml"); // connects to cfg
+		ServiceRegistryBuilder builder = new ServiceRegistryBuilder().applySettings(configuration.getProperties());
+		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.buildServiceRegistry());
+
+		session = sessionFactory.openSession();
+		System.out.println("Connected to pf...");
+	}
 	
 	String admin_id;
 	String secret_pass;
@@ -36,11 +50,6 @@ public class AdminModel {
 	}
 
 
-
-	public AdminModel() {
-		DatabaseModel db = new DatabaseModel();
-		con=DatabaseModel.con;
-	}
 	
 	public List viewSubscription() {
 		Transaction tran = session.beginTransaction();
