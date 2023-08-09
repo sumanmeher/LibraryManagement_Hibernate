@@ -4,7 +4,7 @@
 <hibernate-mapping>
 	<class
 		name="com.digit.hibernateServlet.bean.PurchaseHistoryDetails"
-		table="purchare_history">
+		table="purchase_history">
 		<id name="p_id" column="p_id">
 			<generator class="increment"></generator>
 		</id>
