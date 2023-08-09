@@ -12,13 +12,13 @@
 <body>
 <%
 	session = request.getSession();
-	List userList = (List) session.getAttribute("inactiveBooks");
+	List userList = (List) session.getAttribute("allBooks");
 	Iterator itr = userList.iterator();
 
 	
 	%>
 	
-	<form action="changeBookActive" method="post">
+	<form action="changeBookInactive" method="post">
 		<select name="bookId">
 		<%
 		while (itr.hasNext()) {

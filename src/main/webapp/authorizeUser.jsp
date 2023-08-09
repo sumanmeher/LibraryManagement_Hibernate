@@ -1,8 +1,9 @@
-<%@page import="com.digit.hibernateServlet.bean.BookDetails"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
+    <%@page import="com.digit.hibernateServlet.bean.UserDetails"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.List"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,19 +13,18 @@
 <body>
 <%
 	session = request.getSession();
-	List userList = (List) session.getAttribute("inactiveBooks");
+	List userList = (List) session.getAttribute("inactiveUser");
 	Iterator itr = userList.iterator();
 
 	
 	%>
 	
-	<form action="changeBookActive" method="post">
-		<select name="bookId">
+	<form action="changeUserActive" method="post">
+		<select name="userId">
 		<%
 		while (itr.hasNext()) {
-			BookDetails sd = (BookDetails) itr.next();
-			out.println("<option value='"+sd.getB_id()+"'>" + sd.getB_name()+"</option>");
-
+			UserDetails sd = (UserDetails) itr.next();
+			out.println("<option value='"+sd.getU_id()+"'>" + sd.getU_name()+"</option>");
 		}
 		%>
 		</select>
