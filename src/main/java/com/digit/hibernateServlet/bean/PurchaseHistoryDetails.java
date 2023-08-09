@@ -7,6 +7,20 @@ public class PurchaseHistoryDetails {
 	int u_id;
 	int amount;
 	int invoice_no;
+	
+	public PurchaseHistoryDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public PurchaseHistoryDetails(int p_id, int b_id, String b_name, int u_id, int amount, int invoice_no) {
+		super();
+		this.p_id = p_id;
+		this.b_id = b_id;
+		this.b_name = b_name;
+		this.u_id = u_id;
+		this.amount = amount;
+		this.invoice_no = invoice_no;
+	}
 
 	public int getP_id() {
 		return p_id;
