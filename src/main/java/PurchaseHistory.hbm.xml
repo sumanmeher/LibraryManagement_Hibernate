@@ -23,6 +23,5 @@
 		<property name="invoice_no">
 			<column name="invoice_no" />
 		</property>
-
 	</class>
 </hibernate-mapping>
