@@ -64,7 +64,6 @@ public class UserModel {
 //		PurchaseHistoryDetails ps1=new PurchaseHistoryDetails(5,5,"asdf",1,123,123);
 		Serializable save = session.save(ps);
 		tran.commit();
-		
 		return true;
 	}
 	
