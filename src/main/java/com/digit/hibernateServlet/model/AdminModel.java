@@ -16,8 +16,6 @@ public class AdminModel {
 	public static Session session;
 	
 	public AdminModel() {
-		DatabaseModel db = new DatabaseModel();
-		con=DatabaseModel.con;
 		Configuration configuration = new Configuration().configure("hibernate.cfg.xml"); // connects to cfg
 		ServiceRegistryBuilder builder = new ServiceRegistryBuilder().applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.buildServiceRegistry());
@@ -26,30 +24,6 @@ public class AdminModel {
 		System.out.println("Connected to pf...");
 	}
 	
-	String admin_id;
-	String secret_pass;
-	
-	
-	public String getAdmin_id() {
-		return admin_id;
-	}
-
-
-	public void setAdmin_id(String admin_id) {
-		this.admin_id = admin_id;
-	}
-
-
-	public String getSecret_pass() {
-		return secret_pass;
-	}
-
-
-	public void setSecret_pass(String secret_pass) {
-		this.secret_pass = secret_pass;
-	}
-
-
 	
 	public List viewSubscription() {
 		Transaction tran = session.beginTransaction();
