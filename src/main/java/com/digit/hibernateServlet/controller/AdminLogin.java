@@ -19,9 +19,6 @@ public class AdminLogin extends HttpServlet{
 		HttpSession session = req.getSession();
 		int username= Integer.parseInt(req.getParameter("username"));
 	    String password= req.getParameter("password");
-//	    AdminDetails admin = new AdminDetails();
-//	    admin.setAdmin_id(username);
-//	    admin.setSecret_pass(password);
 	    
 	    AdminModel adminModel = new AdminModel();
 	    boolean isLogin = adminModel.login(username,password); 
