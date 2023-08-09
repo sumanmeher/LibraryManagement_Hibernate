@@ -12,6 +12,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 import com.digit.hibernateServlet.bean.AdminDetails;
+import com.digit.hibernateServlet.bean.BookDetails;
 
 public class AdminModel {
 
@@ -78,6 +79,15 @@ public class AdminModel {
 		tran.commit();
     	
 		return false;
+	}
+	
+	public List inactiveBoooks() {
+		Transaction tran=session.beginTransaction();
+//		BookDetails ad = (BookDetails) session.get(BookDetails.class,username);
+		Query q = session.createQuery("From BookDetails where status='inactive'");
+		List li = q.list();
+		return li;
+		
 	}
 	
 }
