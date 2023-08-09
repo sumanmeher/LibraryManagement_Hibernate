@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.digit.hibernateServlet.bean.PurchaseHistoryDetails" table="purchase_history">
+		<id name="p_id" column="p_id"></id>
+		<property name="b_id">
+			<column name="b_id" />
+		</property>
+		<property name="b_name">
+			<column name="b_name" />
+		</property>
+		<property name="u_id">
+			<column name="u_id" />
+		</property>
+		<property name="amount">
+			<column name="amount" />
+		</property>
+		<property name="invoice_no">
+			<column name="invoice_no" />
+		</property>
+	
+	</class>
+</hibernate-mapping>

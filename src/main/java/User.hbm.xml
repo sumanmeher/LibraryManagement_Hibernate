@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.digit.hibernateServlet.bean.UserDetails" table="user">
+		<id name="u_id" column="u_id"></id>
+		<property name="u_name">
+			<column name="u_name" />
+		</property>
+		<property name="pass">
+			<column name="pass" />
+		</property>
+		<property name="address">
+			<column name="address" />
+		</property>
+		<property name="phone">
+			<column name="phone" />
+		</property>
+		<property name="email">
+			<column name="email" />
+		</property>
+		<property name="status">
+			<column name="status" />
+		</property>
+	</class>
+</hibernate-mapping>
