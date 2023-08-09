@@ -141,5 +141,21 @@ public class AdminModel {
 		return true;
 	}
 
+	public List activeUser() {
+		Transaction tran=session.beginTransaction();
+		Query q = session.createQuery("From UserDetails where status='active'");
+		List li = q.list();
+		return li;
+	}
+
+	public boolean changeUserInactive(int userId) {
+		Transaction tran=session.beginTransaction();
+		UserDetails s = (UserDetails) session.get(UserDetails.class, userId);
+		s.setStatus("inactive");
+		session.update(s);
+		tran.commit();
+		return true;
+	}
+
 
 }

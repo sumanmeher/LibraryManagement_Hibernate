@@ -1,34 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Register</title>
-</head>
-<body>
-	
-	<form action="Register">
-		<label >Enter Username</label>
-        <input type="text" name="u_name"><br>
-        <label >Enter Password</label>
-        <input type="password" name="pass"><br>
-        <label >Enter Address</label>
-        <input type="text" name="address"><br>
-        <label >Enter Phone No.</label>
-        <input type="text" name="phone"><br>
-        <label >Enter Email ID</label>
-        <input type="text" name="email"><br>
-		
-		<input type="submit">
-	</form>
-
-</body>
-</html>
-
--->
-
-
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,24 +91,49 @@
 
       <div class="row justify-content-center"  >
         <div class="col-xl-6 col-lg-8">
-          <h1>Register User<span>.</span></h1>
+          <h1>Admin Menu<span>.</span></h1>
           <h2>Select an Option</h2>
         </div>
       </div>
 
-      <div class="row gy-4 mt-5 justify-content-center mb-5" style="color:white;">
-       <div class="col-2">
-       <form action="Register">
-        <input type="text" name="u_name" placeholder="Enter Username" class="form form-control"><br>
-<input type="password" name="pass" placeholder="Enter Password" class="form form-control"><br>
-<input type="text" name="address" placeholder="Enter Address" class="form form-control"><br>
-<input type="text" name="phone" placeholder="Enter Phone No." class="form form-control"><br>
-<input type="text" name="email" placeholder="Enter Email ID" class="form form-control"><br>
-
-		
-		<input type="submit" class="btn btn-success">
-	</form>
+      <div class="row gy-4 mt-5 justify-content-center">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-store-line"></i>
+            <h3><a href="ViewSubscription">View Subscription</a></h3>
+          </div>
         </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-bar-chart-box-line"></i>
+            <h3><a href="ViewPurchaseHistory">View Purchase History</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-calendar-todo-line"></i>
+            <h3><a href="authorizeBook">Authorize New Books</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-paint-brush-line"></i>
+            <h3><a href="deleteBook">Remove Books</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-database-2-line"></i>
+            <h3><a href="authorizeUser">Authorize New Users</a></h3>
+          </div>
+        </div>
+           <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-database-2-line"></i>
+            <h3><a href="deleteUser">Remove User</a></h3>
+          </div>
+        </div>
+        
       </div>
 
     </div>
