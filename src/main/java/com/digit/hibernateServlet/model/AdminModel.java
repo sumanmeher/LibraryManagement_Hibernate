@@ -11,7 +11,10 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistryBuilder;
 
+import com.digit.hibernateServlet.bean.AdminDetails;
+
 public class AdminModel {
+
 	public static Connection con;
 	public static Session session;
 	
@@ -24,6 +27,7 @@ public class AdminModel {
 		System.out.println("Connected to pf...");
 	}
 	
+
 	
 	public List viewSubscription() {
 		Transaction tran = session.beginTransaction();
@@ -35,4 +39,19 @@ public class AdminModel {
 		return li;
 		
 	}
+	
+	public boolean login(int username, String password) {
+
+		
+		Transaction tran=session.beginTransaction();
+		AdminDetails ad = (AdminDetails) session.get(AdminDetails.class,username);
+    	
+		if(ad.getSecret_pass().equals(password)) {
+			return true;
+		}
+		tran.commit();
+    	
+		return false;
+	}
+	
 }
