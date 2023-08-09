@@ -2,8 +2,11 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.digit.hibernateServlet.bean.SubscriptionDetails" table="subscription">
-		<id name="sub_id" column="sub_id"></id>
+	<class name="com.digit.hibernateServlet.bean.SubscriptionDetails"
+		table="subscription">
+		<id name="sub_id" column="sub_id">
+			<generator class="increment"></generator>
+		</id>
 		<property name="u_id">
 			<column name="u_id" />
 		</property>
@@ -16,6 +19,6 @@
 		<property name="date">
 			<column name="date" />
 		</property>
-		
+
 	</class>
 </hibernate-mapping>

@@ -2,8 +2,12 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.digit.hibernateServlet.bean.PurchaseHistoryDetails" table="purchase_history">
-		<id name="p_id" column="p_id"></id>
+	<class
+		name="com.digit.hibernateServlet.bean.PurchaseHistoryDetails"
+		table="purchare_history">
+		<id name="p_id" column="p_id">
+			<generator class="increment"></generator>
+		</id>
 		<property name="b_id">
 			<column name="b_id" />
 		</property>
@@ -19,6 +23,6 @@
 		<property name="invoice_no">
 			<column name="invoice_no" />
 		</property>
-	
+
 	</class>
 </hibernate-mapping>
