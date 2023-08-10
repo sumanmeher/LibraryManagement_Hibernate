@@ -479,7 +479,7 @@ h6 {
   color: #ffc451;
 }
 
-#hero .icon-box:hover {
+#hero .icon-box:hover { 
   border-color: #ffc451;
   background: rgb(235 235 235 / 53%);
 }
