@@ -5,12 +5,7 @@ public class BankAccountDetails {
 	int pin;
 	int amount;
 
-	public BankAccountDetails(int acc_no, int pin, int amount) {
-		super();
-		this.acc_no = acc_no;
-		this.pin = pin;
-		this.amount = amount;
-	}
+
 
 	public int getAcc_no() {
 		return acc_no;

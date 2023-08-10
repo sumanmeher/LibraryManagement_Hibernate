@@ -22,8 +22,12 @@ public class PaymentGateway extends HttpServlet{
 		int pin = Integer.parseInt(req.getParameter("pin"));
 		int amount = (int) session.getAttribute("subscription_amount");
 		int userId=1;
-		UserModel um = new UserModel();
-		um.paymentGateway(acc_no,pin, userId, amount);
 		
+		UserModel um = new UserModel();
+		boolean pg = um.paymentGateway(acc_no,pin, userId, amount);
+		if(pg)
+			res.sendRedirect("success.jsp");
+		else
+			res.sendRedirect("failed.jsp");
 	}
 }
