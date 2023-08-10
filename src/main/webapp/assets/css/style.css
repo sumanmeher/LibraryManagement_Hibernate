@@ -452,6 +452,7 @@ h6 {
   border: 1px solid rgba(255, 255, 255, 0.3);
   height: 100%;
   text-align: center;
+  background: rgb(235 235 235 / 32%);
 }
 
 #hero .icon-box i {
@@ -478,8 +479,9 @@ h6 {
   color: #ffc451;
 }
 
-#hero .icon-box:hover {
+#hero .icon-box:hover { 
   border-color: #ffc451;
+  background: rgb(235 235 235 / 53%);
 }
 
 @media (min-width: 1024px) {
