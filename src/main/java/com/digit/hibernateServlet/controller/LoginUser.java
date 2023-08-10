@@ -23,9 +23,8 @@ public class LoginUser extends HttpServlet{
 		boolean isLogin = userModel.userLogin(userId, password);
 		
 		if(isLogin) {
-//	    	session.setAttribute("student_username", username);
-//	    	session.setAttribute("s_marks", password);
-	    	res.sendRedirect("success.jsp");
+	    	session.setAttribute("student_id", userId);
+	    	res.sendRedirect("userMenu.html");
 	    }else { 
 			res.sendRedirect("failed.jsp");
 	    }
