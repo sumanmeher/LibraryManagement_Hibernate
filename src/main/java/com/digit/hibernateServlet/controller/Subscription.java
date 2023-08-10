@@ -24,7 +24,7 @@ public class Subscription extends HttpServlet{
 		case "gold":
 			rate=999;
 			break;
-		case "diamond":
+		case "diamond": 
 			rate=1599;
 			break;
 		}
