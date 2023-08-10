@@ -51,7 +51,7 @@
 
       <h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1>
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="Logout" class="get-started-btn scrollto">Logout</a>
 
     </div>
   </header><!-- End Header -->
@@ -115,6 +115,17 @@
 
     </div>
   </section><!-- End Hero -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Library Management. All rights reserved. Digit Insurance
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
 
 
     
