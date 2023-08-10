@@ -18,6 +18,6 @@
       <mapping resource="PurchaseHistory.hbm.xml"/>
       <mapping resource="Subscription.hbm.xml"/>
       <mapping resource="User.hbm.xml"/>
-      <mapping resource="BankAccount.hbm.xml"/>
+      <mapping resource="BankAccount.hbm.xml"/> 
 </session-factory>
 </hibernate-configuration>
