@@ -4,8 +4,11 @@ import java.io.Serializable;
 import java.sql.Connection;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Random;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -69,9 +72,13 @@ public class UserModel {
 		
 	}
 
-	public void paymentGateway(int acc_no, int pin, int userId, int amount) {
+	public boolean paymentGateway(int acc_no, int pin, int userId, int amount) {
 		Transaction tran = session.beginTransaction();
+		System.out.println(acc_no);
+		
 		BankAccountDetails bank = (BankAccountDetails)session.get(BankAccountDetails.class, acc_no); 
+//		
+		System.out.println(bank.getAcc_no());
 		if(bank.getPin()==pin){
 			if(bank.getAmount()>=amount) {
 				bank.setAmount(bank.getAmount()-amount);
@@ -79,9 +86,6 @@ public class UserModel {
 				
 				 Random rand = new Random();
 				 int rand_int1 = rand.nextInt(1000);
-				
-				 
-//				 LocalDate now = java.time.LocalDate.now();
 				 
 				 Date dat = new Date();
 				 SimpleDateFormat format = new SimpleDateFormat("dd/mm/yy");
@@ -96,8 +100,10 @@ public class UserModel {
 				session.save(sub);
 				
 				tran.commit();
+				return true;
 			}
 		}
+		return false;
 	}
 	
 	
