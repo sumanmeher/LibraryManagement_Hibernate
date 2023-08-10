@@ -8,7 +8,7 @@
       <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
       <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library_management</property>
       <property name="hibernate.connection.username">root</property>
-      <property name="hibernate.connection.password">Dhoni$1234</property>
+      <property name="hibernate.connection.password">admin@12345</property>
       <property name="hibernate.connection.pool_size">10</property>
       <property name="show_sql">true</property>
       <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -18,5 +18,6 @@
       <mapping resource="PurchaseHistory.hbm.xml"/>
       <mapping resource="Subscription.hbm.xml"/>
       <mapping resource="User.hbm.xml"/>
+      <mapping resource="BankAccount.hbm.xml"/>
 </session-factory>
 </hibernate-configuration>
