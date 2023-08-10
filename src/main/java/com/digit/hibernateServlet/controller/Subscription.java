@@ -30,7 +30,6 @@ public class Subscription extends HttpServlet{
 		}
 		
 		UserModel um = new UserModel();
-//		um.subscription();
 		HttpSession session = req.getSession();
 		session.setAttribute("subscription_amount", rate);
 		res.sendRedirect("paymentGateway.jsp");

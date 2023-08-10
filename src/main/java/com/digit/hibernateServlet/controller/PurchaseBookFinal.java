@@ -16,7 +16,7 @@ public class PurchaseBookFinal extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		HttpSession session = req.getSession();
-		int userId=1;
+		int userId= (int) session.getAttribute("student_id");
 		int b_id = Integer.parseInt(req.getParameter("b_id"));
 		//String b_name = (String) session.getAttribute("b_name");
 		
