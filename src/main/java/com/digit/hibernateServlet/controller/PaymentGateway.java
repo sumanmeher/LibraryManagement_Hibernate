@@ -11,29 +11,19 @@ import javax.servlet.http.HttpSession;
 
 import com.digit.hibernateServlet.model.UserModel;
 
-@WebServlet("/subscription")
-public class Subscription extends HttpServlet{
+@WebServlet("/paymentGateway")
+public class PaymentGateway extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		String subscriptionType = req.getParameter("subscriptionType");
-		int rate=0;
-		switch(subscriptionType) {
-		case "silver":
-			rate=299;
-			break;
-		case "gold":
-			rate=999;
-			break;
-		case "diamond":
-			rate=1599;
-			break;
-		}
 		
-		UserModel um = new UserModel();
-//		um.subscription();
 		HttpSession session = req.getSession();
-		session.setAttribute("subscription_amount", rate);
-		res.sendRedirect("paymentGateway.jsp");
+		
+		int acc_no = Integer.parseInt(req.getParameter("acc_no"));
+		int pin = Integer.parseInt(req.getParameter("pin"));
+		int amount = (int) session.getAttribute("subscription_amount");
+		int userId=1;
+		UserModel um = new UserModel();
+		um.paymentGateway(acc_no,pin, userId, amount);
 		
 	}
 }

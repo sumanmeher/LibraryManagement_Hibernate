@@ -2,6 +2,8 @@ package com.digit.hibernateServlet.model;
 
 import java.io.Serializable;
 import java.sql.Connection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 import org.hibernate.Session;
@@ -10,8 +12,10 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistryBuilder;
 
+import com.digit.hibernateServlet.bean.BankAccountDetails;
 import com.digit.hibernateServlet.bean.BookDetails;
 import com.digit.hibernateServlet.bean.PurchaseHistoryDetails;
+import com.digit.hibernateServlet.bean.SubscriptionDetails;
 import com.digit.hibernateServlet.bean.UserDetails;
 
 public class UserModel {
@@ -34,11 +38,6 @@ public class UserModel {
 		if (ad.getPass().equals(password) && ad.getStatus().equals("active")) {
 			return true;
 		}
-//		tran.commit();
-		
-		
-//		PurchaseHistoryDetails ps1=new PurchaseHistoryDetails(5,5,"asdf",1,123,123);
-//		session.saveOrUpdate(ps1);
 
 		tran.commit();
 		return false;
@@ -60,11 +59,45 @@ public class UserModel {
 		ps.setInvoice_no(invoice_no);
 		
 		
-//		System.out.println(bookId+ps.getB_id()+ps.getB_name());
-//		PurchaseHistoryDetails ps1=new PurchaseHistoryDetails(5,5,"asdf",1,123,123);
 		Serializable save = session.save(ps);
 		tran.commit();
 		return true; 
+	}
+
+	public void subscription(int acc_no, int amount) {
+//		BankAccountDetails bank = (BankAccountDetails)session.get(BankAccountDetails.class, acc_no); 
+		
+	}
+
+	public void paymentGateway(int acc_no, int pin, int userId, int amount) {
+		Transaction tran = session.beginTransaction();
+		BankAccountDetails bank = (BankAccountDetails)session.get(BankAccountDetails.class, acc_no); 
+		if(bank.getPin()==pin){
+			if(bank.getAmount()>=amount) {
+				bank.setAmount(bank.getAmount()-amount);
+				session.update(bank);
+				
+				 Random rand = new Random();
+				 int rand_int1 = rand.nextInt(1000);
+				
+				 
+//				 LocalDate now = java.time.LocalDate.now();
+				 
+				 Date dat = new Date();
+				 SimpleDateFormat format = new SimpleDateFormat("dd/mm/yy");
+				 String date = format.format(dat);
+				 
+				 
+				 SubscriptionDetails sub = new SubscriptionDetails();
+				sub.setU_id(userId);
+				sub.setAmount(amount);
+				sub.setInvoice_no(rand_int1);
+				sub.setDate(date);
+				session.save(sub);
+				
+				tran.commit();
+			}
+		}
 	}
 	
 	
