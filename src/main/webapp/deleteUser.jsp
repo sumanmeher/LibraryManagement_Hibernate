@@ -66,9 +66,10 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center mb-5" style="color:white;">
-       <div class="col-2">
+       <div class="col-3 form-box">
+       <h2>Select the User</h2>
       	<form action="changeUserInactive" method="post">
-		<select name="userId" class="form form-control">
+		<select name="userId" class="form form-control mt-3">
 		<%
 		while (itr.hasNext()) {
 			UserDetails sd = (UserDetails) itr.next();

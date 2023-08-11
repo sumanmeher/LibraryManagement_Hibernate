@@ -65,9 +65,9 @@
         <div class="row">
           
           <div class="col-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="color:white;">
-            <h3>All Subscription</h3>
+            <h1 style="font-size:42px;">All Subscription</h1>
 
-				<div class="container mt-4">
+				<div class="container">
             <div class="card mb-4">
                 <div class="card-body">
                     <!--Table-->

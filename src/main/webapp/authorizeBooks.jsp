@@ -63,7 +63,8 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center mb-5" style="color:white;">
-       <div class="col-2">
+       <div class="col-3 form-box">
+       <h3>Choose the Book</h3>
       <form action="changeBookActive" method="post">
        <select name="bookId" class="form form-control">
 		<%

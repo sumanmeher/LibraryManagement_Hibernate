@@ -62,9 +62,10 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center mb-5" style="color:white;">
-       <div class="col-2">
+       <div class="col-3 form-box">
+       <h2>Select a Book</h2>
       <form action="PurchaseBookFinal" method="post">
-		<select name="b_id" class="form form-control">
+		<select name="b_id" class="form form-control mt-3">
 			<%
 			while (itr.hasNext()) {
 				BookDetails sd = (BookDetails) itr.next();
@@ -82,7 +83,6 @@
     </div>
   </section><!-- End Hero -->
 
-  <main id="main">
   <footer id="footer">
     
 

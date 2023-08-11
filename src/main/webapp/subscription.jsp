@@ -58,8 +58,8 @@
           <h1 style="font-size:43px;">Subscription Plan<span>.</span></h1>
         <br>
         
-        <div class="subscription-plan">
-  <ul>
+        <div class="subscription-plan  form-box mb-3" style="width:fit-content; margin:auto;">
+  <ul style="padding:10px;">
     <li>
       <strong style="color: white;">Plan Name:</strong> Silver<br>
       <strong style="color: white;">Rate:</strong> &#8377; 299/month<br><br>
@@ -79,10 +79,11 @@
         </div>
       </div>
 
-      <div class="row gy-4 mt-5 justify-content-center mb-5" style="color:white;">
-       <div class="col-2">
+      <div class="row gy-4 justify-content-center mb-5" style="color:white;">
+       <div class="col-3 form-box">
+       <h2>Select a Book</h2>
       	<form action="subscription">
-		<select name="subscriptionType" class="form form-control">
+		<select name="subscriptionType" class="form form-control mt-2">
 			<option value="silver">Silver</option>
 			<option value="gold">Gold</option>
 			<option value="diamond">Diamond</option>
@@ -95,7 +96,6 @@
     </div>
   </section><!-- End Hero -->
 
-  <main id="main">
   <footer id="footer">
     
 

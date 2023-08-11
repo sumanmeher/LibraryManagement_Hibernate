@@ -68,9 +68,10 @@
       </div>
 
       <div class="row gy-4 mt-5 justify-content-center mb-5" style="color:white;">
-       <div class="col-2">
+       <div class="col-3 form-box">
+       <h2>Choose the Book</h2>
       <form action="changeBookInactive" method="post">
-		<select name="bookId" class="form-control">
+		<select name="bookId" class="form-control mt-2">
 		<%
 		while (itr.hasNext()) {
 			BookDetails sd = (BookDetails) itr.next();
