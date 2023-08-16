@@ -64,7 +64,7 @@
 
         <div class="row">
           
-          <div class="col-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="color:white;">
+          <div class="col-8 pt-4 pt-lg-0 order-2 order-lg-1 content" style="color:white;">
             <h3>All Purchase</h3>
 
 				<div class="container">
