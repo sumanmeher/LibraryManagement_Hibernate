@@ -44,7 +44,7 @@ public class AdminModel {
 	public boolean login(int username, String password) {
 		Transaction tran = session.beginTransaction();
 		AdminDetails ad = (AdminDetails) session.get(AdminDetails.class, username);
-
+		if(ad==null) return false;
 		if (ad.getSecret_pass().equals(password)) {
 			return true;
 		}
@@ -123,10 +123,10 @@ public class AdminModel {
 		Transaction tran = session.beginTransaction();
 		Serializable save = session.save(ud);
 		tran.commit();
-		System.out.println("Registered");
 		if (save == null) {
 			return false;
 		}
+		
 		return true;
 	}
 	

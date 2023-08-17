@@ -21,7 +21,7 @@ public class PaymentGateway extends HttpServlet{
 		int acc_no = Integer.parseInt(req.getParameter("acc_no"));
 		int pin = Integer.parseInt(req.getParameter("pin"));
 		int amount = (int) session.getAttribute("subscription_amount");
-		int userId=1;
+		int userId=(int) session.getAttribute("student_id");
 		
 		UserModel um = new UserModel();
 		boolean pg = um.paymentGateway(acc_no,pin, userId, amount);
