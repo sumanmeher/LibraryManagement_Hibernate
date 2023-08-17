@@ -7,5 +7,6 @@
 		<property name="secret_pass">
 			<column name="secret_pass" />
 		</property>
+		
 	</class>
 </hibernate-mapping>
