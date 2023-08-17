@@ -13,6 +13,8 @@
 ## 📝 Table of Contents
 - [About](#about)
 - [Features](#features)
+- [Technologies](#technologies)
+- [Tools](#tools)
 - [Screenshots](#screenshots)
 - [Acknowledgments](#acknowledgement)
 
@@ -38,6 +40,22 @@ This is a Library Management System built using Servlets, Hibernate, and MySql D
 * Users Menu
   * Purchase a Book
   * Subscribe to Library
+ 
+## 👩🏻‍💻 Technologies <a name = "technologies"></a>
+
+- Java
+- MySQL
+- Server
+- Hibernate
+- MVC
+- Bootstrap
+
+  
+## ⚙️ Tools <a name="tools"></a>
+
+- Eclipse EE IDE
+- SQLyog
+- Tomcat 9.0
 
 
 ## 🏁 Screenshots<a name = "screenshots"></a>
