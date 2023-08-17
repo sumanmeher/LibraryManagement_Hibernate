@@ -50,7 +50,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Library Management<span>.</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="adminMenu.jsp">Library Management<span>.</span></a></h1>
 
       <a href="Logout" class="get-started-btn scrollto">Logout</a>
 

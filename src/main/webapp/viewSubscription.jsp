@@ -23,14 +23,11 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
   <link href="https://vectorified.com/images/library-book-icon-2.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link href="assets/vendor//.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -45,18 +42,16 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Library Management<span>.</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="adminMenu.jsp">Library Management<span>.</span></a></h1>
 
       <a href="Logout" class="get-started-btn scrollto">Logout</a>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
     <div class="container">
 
@@ -64,7 +59,7 @@
 
         <div class="row">
           
-          <div class="col-6 pt-4 pt-lg-0 order-2 order-lg-1 content" style="color:white;">
+          <div class="col-8 pt-4 pt-lg-0 order-2 order-lg-1 content" style="color:white;">
             <h1 style="font-size:42px;">All Subscription</h1>
 
 				<div class="container">
@@ -79,7 +74,7 @@
                                 <th>User Id</th>
                                 <th>Amount</th>
                                 <th>Invoice No</th>
-                                <th>City</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         
@@ -91,7 +86,7 @@
                         		out.println("<tr>");
                         		out.println("<td>"+sd.getSub_id()+"</td>");
                         		out.println("<td>"+sd.getU_id()+"</td>");
-                        		out.println("<td>"+sd.getAmount()+"</td>");
+                        		out.println("<td> Rs. "+sd.getAmount()+"</td>");
                         		out.println("<td>"+sd.getInvoice_no()+"</td>");
                         		out.println("<td>"+sd.getDate()+"</td>");
                         		out.println("</tr>");
@@ -114,8 +109,7 @@
         </div>
 
     </div>
-  </section><!-- End Hero -->
-  <!-- ======= Footer ======= -->
+  </section>
   <footer id="footer">
     
 
@@ -125,7 +119,7 @@
       </div>
       
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
 
     

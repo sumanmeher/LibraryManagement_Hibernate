@@ -20,6 +20,11 @@ public class Register extends HttpServlet {
 		String address = req.getParameter("address");
 		String phone = req.getParameter("phone");
 		String email = req.getParameter("email");
+		
+		if(pass.length()<8 || phone.length()!=10) {
+			res.sendRedirect("failed.jsp");
+			return;
+		}
 
 		UserDetails ud = new UserDetails();
 

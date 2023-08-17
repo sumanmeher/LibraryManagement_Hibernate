@@ -3,6 +3,8 @@ package com.digit.hibernateServlet.model;
 import java.io.Serializable;
 import java.sql.Connection;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -87,9 +89,10 @@ public class UserModel {
 				 Random rand = new Random();
 				 int rand_int1 = rand.nextInt(1000);
 				 
-				 Date dat = new Date();
-				 SimpleDateFormat format = new SimpleDateFormat("dd/mm/yy");
-				 String date = format.format(dat);
+				 
+				 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");  
+				   LocalDateTime now = LocalDateTime.now();  
+				   String date=dtf.format(now);
 				 
 				 
 				 SubscriptionDetails sub = new SubscriptionDetails();
