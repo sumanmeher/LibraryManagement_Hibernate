@@ -23,7 +23,7 @@ public class Register extends HttpServlet {
 		
 		if(pass.length()<8 || phone.length()!=10) {
 			res.sendRedirect("failed.jsp");
-			return;
+			return; 
 		}
 
 		UserDetails ud = new UserDetails();
