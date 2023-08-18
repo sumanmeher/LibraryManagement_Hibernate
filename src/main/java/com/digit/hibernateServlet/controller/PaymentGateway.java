@@ -17,7 +17,7 @@ public class PaymentGateway extends HttpServlet{
 	protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		
 		HttpSession session = req.getSession();
-		
+		try {
 		int acc_no = Integer.parseInt(req.getParameter("acc_no"));
 		int pin = Integer.parseInt(req.getParameter("pin"));
 		int amount = (int) session.getAttribute("subscription_amount");
@@ -29,5 +29,8 @@ public class PaymentGateway extends HttpServlet{
 			res.sendRedirect("success.jsp");
 		else
 			res.sendRedirect("failed.jsp");
+		}catch (Exception e) {
+			res.sendRedirect("failed.jsp");
+		}
 	}
 }
