@@ -47,7 +47,7 @@
           
           <h1 class="tick mt-5" >&#10004;</h1>
           
-          <h2><a href="index.html">Goto Home.</a></h2>
+          <h2><a href="adminMenu.jsp">Goto Home.</a></h2>
           
         </div>
       </div> 

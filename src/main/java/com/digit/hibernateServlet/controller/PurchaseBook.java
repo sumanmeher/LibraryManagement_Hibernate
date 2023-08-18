@@ -21,7 +21,7 @@ public class PurchaseBook extends HttpServlet{
 		List activeBooks = am.activeBooks();
 		session.setAttribute("allBooks", activeBooks);
 		if (activeBooks == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedUserMenu.jsp");
 		} else {
 			res.sendRedirect("purchaseBook.jsp");
 		}

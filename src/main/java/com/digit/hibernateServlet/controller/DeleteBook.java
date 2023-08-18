@@ -21,7 +21,7 @@ public class DeleteBook extends HttpServlet{
 		List activeBooks = am.activeBooks();
 		session.setAttribute("allBooks", activeBooks);
 		if (activeBooks == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedAdminMenu.jsp");
 		} else {
 			res.sendRedirect("deleteBooks.jsp");
 		}

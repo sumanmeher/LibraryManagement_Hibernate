@@ -21,7 +21,7 @@ public class ViewSubscription extends HttpServlet {
 		List viewSubscription = am.viewSubscription();
 		session.setAttribute("viewSubscription", viewSubscription);
 		if (viewSubscription == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedAdminMenu.jsp");
 		} else {
 			res.sendRedirect("viewSubscription.jsp");
 		}

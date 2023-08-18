@@ -18,7 +18,7 @@ public class ChnageBookInactive extends HttpServlet{
 		AdminModel adminModel = new AdminModel();
 		boolean done = adminModel.changeBookInactive(bookId);
 	    if(done) {
-	    	res.sendRedirect("success.jsp");
+	    	res.sendRedirect("successAdminMenu.jsp");
 	    }else {
 	    	res.sendRedirect("failed.jsp");
 	    }

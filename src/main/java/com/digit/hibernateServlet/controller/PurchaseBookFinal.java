@@ -23,9 +23,9 @@ public class PurchaseBookFinal extends HttpServlet{
 		UserModel um = new UserModel();
 		boolean isPurchase = um.purchaseBook(b_id, userId);
 		if(isPurchase==true) {
-			res.sendRedirect("success.jsp");
+			res.sendRedirect("successUserMenu.jsp");
 		} else {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedUserMenu.jsp");
 			
 		}
 	}

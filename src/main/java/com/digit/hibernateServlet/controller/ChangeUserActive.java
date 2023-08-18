@@ -18,9 +18,9 @@ public class ChangeUserActive extends HttpServlet{
 		AdminModel adminModel = new AdminModel();
 		boolean done = adminModel.changeUserActive(userId);
 	    if(done) {
-	    	res.sendRedirect("success.jsp");
+	    	res.sendRedirect("successAdminMenu.jsp");
 	    }else {
-	    	res.sendRedirect("failed.jsp");
+	    	res.sendRedirect("failedAdminMenu.jsp");
 	    }
 	}
 }

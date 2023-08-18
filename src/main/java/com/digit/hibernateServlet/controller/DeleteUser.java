@@ -21,7 +21,7 @@ public class DeleteUser extends HttpServlet{
 		List activeUser = am.activeUser();
 		session.setAttribute("activeUser", activeUser);
 		if (activeUser == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedAdminMenu.jsp");
 		} else {
 			res.sendRedirect("deleteUser.jsp");
 		}

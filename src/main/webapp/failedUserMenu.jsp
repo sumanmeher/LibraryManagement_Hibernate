@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Success Page</title>
+  <title>Failed Page</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,11 +43,10 @@
 
       <div class="row justify-content-center"  >
         <div class="col-xl-6 col-lg-8">
-          <h1>Success!!<span>.</span></h1> 
+          <h1>Failed!!<span>.</span></h1> 
           
-          <h1 class="tick mt-5" >&#10004;</h1>
-          
-          <h2><a href="index.html">Goto Home.</a></h2>
+          <h1 class="cross mt-5" >&#10008;</h1>
+          <h2><a href="userMenu.html">Goto Home.</a></h2>
           
         </div>
       </div> 
@@ -71,6 +70,7 @@
     </div>
   </footer>
 
+  <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
  

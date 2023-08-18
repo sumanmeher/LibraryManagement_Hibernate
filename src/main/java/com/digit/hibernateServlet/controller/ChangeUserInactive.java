@@ -18,9 +18,9 @@ public class ChangeUserInactive extends HttpServlet{
 		AdminModel adminModel = new AdminModel();
 		boolean done = adminModel.changeUserInactive(userId);
 	    if(done) {
-	    	res.sendRedirect("success.jsp");
+	    	res.sendRedirect("successAdminMenu.jsp");
 	    }else {
-	    	res.sendRedirect("failed.jsp");
+	    	res.sendRedirect("failedAdminMenu.jsp");
 	    }
 	}
 }

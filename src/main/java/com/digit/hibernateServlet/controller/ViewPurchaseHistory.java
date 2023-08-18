@@ -21,7 +21,7 @@ public class ViewPurchaseHistory extends HttpServlet {
 		List viewPurchaseHistory = am.viewPurchaseHistory();
 		session.setAttribute("viewPurchaseHistory", viewPurchaseHistory);
 		if (viewPurchaseHistory == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedAdminMenu.jsp");
 		} else {
 			res.sendRedirect("viewPurchaseHistory.jsp");
 		}

@@ -21,7 +21,7 @@ public class AuthorizeUser extends HttpServlet{
 		List inactiveUser = am.inactiveUser();
 		session.setAttribute("inactiveUser", inactiveUser);
 		if (inactiveUser == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedAdminUser.jsp");
 		} else {
 			res.sendRedirect("authorizeUser.jsp");
 		}

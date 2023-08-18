@@ -21,7 +21,7 @@ public class AuthorizeBook extends HttpServlet{
 		List inactiveBooks = am.inactiveBoooks();
 		session.setAttribute("inactiveBooks", inactiveBooks);
 		if (inactiveBooks == null) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedAdminMenu.jsp");
 		} else {
 			res.sendRedirect("authorizeBooks.jsp");
 		}

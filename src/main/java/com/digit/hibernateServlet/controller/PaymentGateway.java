@@ -26,11 +26,11 @@ public class PaymentGateway extends HttpServlet{
 		UserModel um = new UserModel();
 		boolean pg = um.paymentGateway(acc_no,pin, userId, amount);
 		if(pg)
-			res.sendRedirect("success.jsp");
+			res.sendRedirect("successUserMenu.jsp");
 		else
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedUserMenu.jsp");
 		}catch (Exception e) {
-			res.sendRedirect("failed.jsp");
+			res.sendRedirect("failedUserMenu.jsp");
 		}
 	}
 }
