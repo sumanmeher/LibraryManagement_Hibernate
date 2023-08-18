@@ -96,4 +96,4 @@ These are some screenshots of our project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 - Credit: - @digitinsurance
-- Instruct by: - @bheemeshraghupathy
+- Instruct by: - @bheemeshraghupathy [Skill-lync]
